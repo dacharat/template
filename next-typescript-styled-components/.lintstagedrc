@@ -1,6 +1,6 @@
 {
   "*.{ts,tsx}": [
     "prettier --write",
-    "tslint --fix"
+    "eslint --fix"
   ]
 }
