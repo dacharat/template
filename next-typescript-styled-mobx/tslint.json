@@ -1,0 +1,78 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-react-hooks"],
+  "rules": {
+    "import-name": false,
+    "align": false,
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[a-zA-Z$][\\w\\d]+$",
+        "method-regex": "^[a-z$][\\w\\d]+$",
+        "private-method-regex": "^[a-z$][\\w\\d]+$",
+        "protected-method-regex": "^[a-z$][\\w\\d]+$",
+        "static-method-regex": "^[a-z$][\\w\\d]+$"
+      }
+    ],
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"]
+    },
+    "react-hooks-nesting": true,
+    "semicolon": [true, "never"],
+    "no-else-after-return": false,
+    "ter-arrow-parens": false,
+    "ordered-imports": [
+      true,
+      {
+        "module-source-path": "full",
+        "grouped-imports": true,
+        "groups": [
+          {
+            "name": "react",
+            "match": "^react.*",
+            "order": 1
+          },
+          {
+            "name": "next",
+            "match": "^next.*",
+            "order": 2
+          },
+          {
+            "name": "internal modules",
+            "match": "^@components.*",
+            "order": 4
+          },
+          {
+            "name": "internal modules",
+            "match": "^@hooks.*",
+            "order": 5
+          },
+          {
+            "name": "internal modules",
+            "match": "^@stores.*",
+            "order": 5
+          },
+          {
+            "name": "internal modules",
+            "match": "^@interface.*",
+            "order": 5
+          },
+          {
+            "name": "internal modules",
+            "match": "^@utils.*",
+            "order": 5
+          },
+          {
+            "name": "relative dir",
+            "match": "^[.].*",
+            "order": 6
+          },
+          {
+            "name": "node modules",
+            "match": ".*",
+            "order": 3
+          }
+        ]
+      }
+    ]
+  }
+}
